@@ -1,0 +1,29 @@
+{
+    "name": "eleza/bot-sdk",
+    "description": "PHP SDK for the Eleza Bot API: long polling, webhooks, keyboards, media, inline mode and Eli posts.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["eleza", "bot", "bot-api", "sdk", "messenger"],
+    "homepage": "https://eleza.me/bots",
+    "require": {
+        "php": ">=8.1",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "suggest": {
+        "ext-fileinfo": "Detects the MIME type of files you upload",
+        "ext-pcntl": "Lets a long-polling bot stop cleanly on SIGINT / SIGTERM"
+    },
+    "autoload": {
+        "psr-4": {"Eleza\\Bot\\": "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {"Eleza\\Bot\\Tests\\": "tests/"}
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
